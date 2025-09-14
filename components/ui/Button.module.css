@@ -1,0 +1,68 @@
+/* Base styles for all buttons, making them clean and modern */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem; /* Softly rounded corners */
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid transparent;
+  cursor: pointer;
+  /* This is the magic for the smooth "enlarge on touch" effect */
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease-in-out;
+  user-select: none; /* Prevents text selection on click */
+}
+
+/* The "pop" or "enlarge" effect on hover */
+.button:hover {
+  transform: scale(1.05);
+}
+
+/* Active state for a subtle press-down effect */
+.button:active {
+  transform: scale(0.98);
+}
+
+
+/* --- Variant Styles --- */
+
+/* The main call-to-action button with a nice light blue */
+.primary {
+  background-color: #3b82f6; /* A pleasant, modern blue */
+  color: white;
+}
+
+.primary:hover {
+  background-color: #2563eb; /* A slightly darker blue on hover */
+}
+
+/* A secondary button for less important actions */
+.secondary {
+  background-color: white;
+  color: #374151; /* Dark gray text */
+  border: 1px solid #d1d5db; /* A light gray border */
+}
+
+.secondary:hover {
+  background-color: #f9fafb; /* A very light gray background on hover */
+  border-color: #9ca3af;
+}
+
+
+/* --- Size Styles --- */
+
+.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.medium {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+

@@ -1,0 +1,66 @@
+/* Main container for the entire page */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    /* NEW: Using a background image. 
+      We add a linear gradient overlay to darken it slightly,
+      ensuring the white text on the card is readable.
+    */
+    background-image: 
+        linear-gradient(rgba(25, 45, 88, 0.5), rgba(25, 45, 88, 0.5)),
+        url('https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+}
+
+/* The main content card */
+.card {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Subtle animation for a premium feel */
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* A gentle "lift" effect when the user hovers over the card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: #0056b3; /* A strong blue for the logo */
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c; /* Dark text for high contrast */
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: #4a5568; /* A softer gray for the description */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between the buttons */
+}
+

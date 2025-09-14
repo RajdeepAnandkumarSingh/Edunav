@@ -1,0 +1,243 @@
+/* About Page Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 50%, #fff3e0 100%);
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 2rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.05),
+    0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  position: relative;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.content {
+  color: #4a5568;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.paragraph {
+  margin-bottom: 1.8rem;
+  text-align: justify;
+}
+
+.tagline {
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  color: #2d3748;
+  margin-top: 2.5rem;
+  font-size: 1.15rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.backLink {
+  display: inline-block;
+  margin: 2.5rem auto 0;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-align: center;
+  width: fit-content;
+  display: block;
+}
+
+.backLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Floating decorative icons */
+.floatingIcons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.floatingIcon {
+  position: absolute;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+/* Individual icon positioning and colors */
+.icon1 {
+  top: 15%;
+  left: 8%;
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  color: white;
+  animation-delay: 0s;
+}
+
+.icon2 {
+  top: 25%;
+  right: 12%;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #2d3748;
+  animation-delay: 1s;
+}
+
+.icon3 {
+  top: 60%;
+  right: 8%;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #2d3748;
+  animation-delay: 2s;
+}
+
+.icon4 {
+  bottom: 20%;
+  left: 15%;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #2d3748;
+  animation-delay: 3s;
+}
+
+.icon5 {
+  top: 10%;
+  right: 25%;
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  color: #2d3748;
+  animation-delay: 4s;
+}
+
+.icon6 {
+  bottom: 15%;
+  right: 20%;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  color: white;
+  animation-delay: 5s;
+}
+
+.icon7 {
+  top: 40%;
+  left: 5%;
+  background: linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%);
+  color: white;
+  animation-delay: 2.5s;
+}
+
+.icon8 {
+  bottom: 30%;
+  left: 8%;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  color: #2d3748;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-15px) rotate(5deg); 
+  }
+  66% { 
+    transform: translateY(-10px) rotate(-3deg); 
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+    margin: 1rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .content {
+    font-size: 1rem;
+  }
+  
+  .floatingIcon {
+    display: none; /* Hide floating icons on mobile for better performance */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .paragraph {
+    text-align: left;
+  }
+}
