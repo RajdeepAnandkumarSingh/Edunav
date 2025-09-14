@@ -5,7 +5,7 @@ import Link from 'next/link';
 // This is how we import the styles specifically for this page
 import styles from './page.module.css';
 // We'll use our awesome reusable button component
-import { Button } from '../components/ui/button';
+import { Button } from '../components/ui/Button';
 // Let's add a nice icon for the logo. You'll need to install lucide-react.
 import { Compass } from 'lucide-react';
 
